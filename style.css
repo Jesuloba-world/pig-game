@@ -147,6 +147,10 @@ i {
     transform: translateX(-50%);
     bottom: 40px;
     padding: 10px;
+    text-align: center;
+    font-family: 'Lato';
+    width: 160px; 
+    text-transform: uppercase;
 }
 
 #winscore-box:focus {
@@ -166,7 +170,7 @@ i {
 }
 
 .dice2 {
-    top: 130px;
+    top: 120px;
 }
 
 .winner { background-color: #f7f7f7; }

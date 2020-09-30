@@ -10,7 +10,9 @@ GAME RULES:
 */
 
 
-var scores, roundScore, activePlayer, winScore, gamePlaying, prevDice1, prevDice2;
+var scores, roundScore, activePlayer, winScore, gamePlaying;
+
+var prevDice1, prevDice2;
 
 init();
 winScore = 100;
@@ -34,7 +36,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         diceDOM2.src = 'dice-' + dice2 + '.png';
 
         // Update the roundscore IF the rolled number is NOT a 1
-        if (dice1 > 1 && dice2 > 1) {
+        if (dice1 !== 1 && dice2 !== 1) {
             // Add score
             roundScore += dice1 + dice2;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
@@ -74,7 +76,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         
         //get present winscore and update
         var newWinScore = document.getElementById('winscore-box').value;
-        if (newWinScore > 0) {
+        if (newWinScore) {
             winScore = newWinScore;
         } else {
             winScore = 100;
@@ -142,7 +144,7 @@ function init() {
 
 
 /*
-ASSIGNMENT
+JS - CHALLENGE6
 
 3 CHALLENGES
 
